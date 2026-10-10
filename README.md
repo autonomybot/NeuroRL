@@ -155,11 +155,11 @@ Each configuration also has a fixed-seed variant (`*-fixed-seed.gif`) for frame-
 
 ### Scalability to four rovers
 
-The same policy architecture with a four-rover team. The figure on the left is the paper's N = 4 scalability trial; the animation on the right is a four-rover team negotiating a corridor.
+The same policy architecture with a four-rover team, over 500 steps of a corridor
+negotiation. Rendered from the episode's original 85 frames rather than re-encoded
+from the compressed clip, so this is the full-resolution record of the trial.
 
-| Paper figure, N = 4 | Four rovers in a corridor |
-|---|---|
-| <img src="demos/configurability/four-rovers-paper-figure.png" width="250"> | <img src="demos/configurability/four-rovers-corridor.gif" width="440"> |
+<img src="demos/configurability/four-rovers-corridor.gif" width="900">
 
 ---
 
