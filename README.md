@@ -10,18 +10,6 @@ This repository publishes the **evaluation results and demonstration videos** fo
 
 ---
 
-## See it first
-
-NeuroRL commanding a three-rover team: the graph is re-formed into a line to clear a corridor, then back into a symmetric ring once through.
-
-<img src="demos/highlights/line-then-ring.gif" width="640" alt="NeuroRL reforming the team graph from ring to line and back">
-
-A full scored evaluation episode, with the health traces and the formation gate visible in the HUD.
-
-<img src="demos/highlights/full-episode.gif" width="640" alt="A full NeuroRL evaluation episode">
-
----
-
 ## Abstract
 
 Planetary exploration increasingly relies on robot teams to perform infrastructure, inspection, and navigation tasks in environments that are unsafe or inaccessible to humans. To verify robot survivability and that critical systems function as intended, robot teaming relies on autonomy that yields interpretable and configurable behavioral strategies. Deterministic controllers can produce explainable behavior, but they often lack adaptability in novel or changing terrain. This paper combines graph representations with reinforcement learning to capture team relations and adapt multi-robot behavior across a hierarchy of navigation objectives. Drawing inspiration from biological neuromodulation, behavioral explainability is grounded in geometric relations within the graph, while configurability arises through a neuromodulated reinforcement pipeline that intrinsically motivates task-agnostic strategy within the graphical transformations (NeuroRL). We test the graph-transformation performance in a Martian simulation and a real-world sandbox using a team of LEO Rovers. Results show that NeuroRL maintains high navigation success while producing configurable tradeoffs among survivability, behavioral assimilation, and symmetric formation, obtained without altering the reinforcement objective itself.
@@ -161,13 +149,17 @@ The same policy architecture, the same map, the same goal-pose structure — onl
 
 The three configurations side by side on one seed:
 
-<img src="demos/configurability/comparison.gif" width="640">
-
-Four rovers negotiating a corridor:
-
-<img src="demos/configurability/four-rovers-corridor.gif" width="480">
+<img src="demos/configurability/comparison.gif" width="900">
 
 Each configuration also has a fixed-seed variant (`*-fixed-seed.gif`) for frame-matched comparison.
+
+### Scalability to four rovers
+
+The same policy architecture with a four-rover team. The figure on the left is the paper's N = 4 scalability trial; the animation on the right is a four-rover team negotiating a corridor.
+
+| Paper figure, N = 4 | Four rovers in a corridor |
+|---|---|
+| <img src="demos/configurability/four-rovers-paper-figure.png" width="250"> | <img src="demos/configurability/four-rovers-corridor.gif" width="440"> |
 
 ---
 
@@ -175,11 +167,10 @@ Each configuration also has a fixed-seed variant (`*-fixed-seed.gif`) for frame-
 
 ```
 demos/
-├── highlights/        the two demos at the top of this page
 ├── showcase/          9 rows x 4 frameworks, same seed within a row
 │   └── outcomes.md    per-row measured outcomes
 ├── classical/         3 planners x 6 difficulty levels, plus NeuroRL stills
-└── configurability/   reward configurations on a fixed map
+└── configurability/   reward configurations, and the four-rover scalability pair
 ```
 
 Each demo is published as an animated `.gif` for inline viewing and as the source `.mp4` at full resolution under the same name.
