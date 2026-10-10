@@ -163,6 +163,24 @@ the only N = 4 checkpoint). Both are rendered from the original simulation frame
 |---|---|
 | <img src="demos/scalability/three-rovers.gif" width="430"> | <img src="demos/scalability/four-rovers.gif" width="430"> |
 
+### Martian simulation
+
+3D simulation trials on the Mars yard. **(A)** small obstacle field traversal. **(B)** symmetry
+during the trajectory shift that favors the longer, safer route over the riskier, faster one.
+**(C)** symmetry held through tighter corridors. **(D)** paths converge by neighborly proximity
+through the tightest corridor.
+
+<img src="figures/marsyard.png" width="900">
+
+### Real-world sandbox
+
+Behavioral configurations on the sandbox with a team of LEO Rovers. Every panel runs the same
+mission objective — surround the farthest object — and differs only in the neuromodulated
+configuration: **(A)** baseline, **(B)** conservative, **(C)** greedy, **(D)** symmetric,
+**(E)** surround any object and return.
+
+<img src="figures/sandbox.png" width="900">
+
 ---
 
 ## Repository layout
@@ -174,6 +192,10 @@ demos/
 ├── classical/         3 planners x 6 difficulty levels, plus NeuroRL stills
 ├── configurability/   reward configurations on a fixed map
 └── scalability/       N=3 against N=4, team size the only difference
+
+figures/
+├── marsyard.png       3D simulation trials, panels A-D
+└── sandbox.png        LEO Rover sandbox configurations, panels A-E
 ```
 
 Each demo is published as an animated `.gif` for inline viewing and as the source `.mp4` at full resolution under the same name.
