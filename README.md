@@ -153,13 +153,15 @@ The three configurations side by side on one seed:
 
 Each configuration also has a fixed-seed variant (`*-fixed-seed.gif`) for frame-matched comparison.
 
-### Scalability to four rovers
+### Scalability
 
-The same policy architecture with a four-rover team, over 500 steps of a corridor
-negotiation. Rendered from the episode's original 85 frames rather than re-encoded
-from the compressed clip, so this is the full-resolution record of the trial.
+N = 3 against N = 4 on the same map, with **team size the only difference** — this is the
+episode behind the paper's N = 4 rollout figure (variant `N4_RAND_L4_severe`, seed 6003,
+the only N = 4 checkpoint). Both are rendered from the original simulation frames.
 
-<img src="demos/configurability/four-rovers-corridor.gif" width="900">
+| Three rovers | Four rovers |
+|---|---|
+| <img src="demos/scalability/three-rovers.gif" width="430"> | <img src="demos/scalability/four-rovers.gif" width="430"> |
 
 ---
 
@@ -170,7 +172,8 @@ demos/
 ├── showcase/          9 rows x 4 frameworks, same seed within a row
 │   └── outcomes.md    per-row measured outcomes
 ├── classical/         3 planners x 6 difficulty levels, plus NeuroRL stills
-└── configurability/   reward configurations, and the four-rover scalability pair
+├── configurability/   reward configurations on a fixed map
+└── scalability/       N=3 against N=4, team size the only difference
 ```
 
 Each demo is published as an animated `.gif` for inline viewing and as the source `.mp4` at full resolution under the same name.
