@@ -10,24 +10,6 @@ This repository publishes the **evaluation results and demonstration videos** fo
 
 ---
 
-## Abstract
-
-Planetary exploration increasingly relies on robot teams to perform infrastructure, inspection, and navigation tasks in environments that are unsafe or inaccessible to humans. To verify robot survivability and that critical systems function as intended, robot teaming relies on autonomy that yields interpretable and configurable behavioral strategies. Deterministic controllers can produce explainable behavior, but they often lack adaptability in novel or changing terrain. This paper combines graph representations with reinforcement learning to capture team relations and adapt multi-robot behavior across a hierarchy of navigation objectives. Drawing inspiration from biological neuromodulation, behavioral explainability is grounded in geometric relations within the graph, while configurability arises through a neuromodulated reinforcement pipeline that intrinsically motivates task-agnostic strategy within the graphical transformations (NeuroRL). We test the graph-transformation performance in a Martian simulation and a real-world sandbox using a team of LEO Rovers. Results show that NeuroRL maintains high navigation success while producing configurable tradeoffs among survivability, behavioral assimilation, and symmetric formation, obtained without altering the reinforcement objective itself.
-
----
-
-## Contributions
-
-1. **A neuromodulated RL framework for interpretable multi-robot teaming.** NeuroRL couples a centralized graph-level PPO policy with decentralized Laplacian consensus control, so that learned team strategies remain expressed as interpretable geometric structure from training through deployment.
-
-2. **Graph transformation as the action space.** The policy reshapes inter-robot adjacency relations through bounded multiplicative, additive, and subtractive masks, lifting the RL action from individual motion to team structure.
-
-3. **Health-based neuromodulated intrinsic reward.** A biologically inspired intrinsic reward, grounded in group health and robot health, makes the return a function of health alone. Team behavior is reconfigured by changing how health is earned and spent, with the objective, task, map, controller, and training budget held fixed.
-
-4. **Modular attribution of behavioral effects.** The framework separates what the reward configures from what the controller configures: the intrinsic weights shift team health and hazard exposure without altering the controller, while a single avoidance gain trades formation for throughput without altering the reward, attributing each effect to its true source.
-
----
-
 ## Results
 
 ### Comparison to learned multi-agent coordination baselines
